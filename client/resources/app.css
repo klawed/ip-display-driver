@@ -1,0 +1,31 @@
+/* IP Display Client - Application Styles */
+
+.display-window {
+    background-color: #000000;
+}
+
+.status-bar {
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+
+.menu-bar {
+    background-color: #3c3c3c;
+    color: #ffffff;
+}
+
+.drawing-area {
+    background-color: #000000;
+}
+
+.connection-status.connected {
+    color: #00ff00;
+}
+
+.connection-status.disconnected {
+    color: #ff0000;
+}
+
+.connection-status.connecting {
+    color: #ffff00;
+}
