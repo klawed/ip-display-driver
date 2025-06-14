@@ -26,6 +26,9 @@ MODULE_PARM_DESC(codec, "Video codec: raw, h264, h265 (default: raw)");
 /* Global device instance */
 static struct ipdisp_device *ipdisp_global_dev;
 
+/* File operations for DRM device */
+DEFINE_DRM_GEM_FOPS(ipdisp_fops);
+
 /* Platform device release function */
 static void ipdisp_platform_release(struct device *dev)
 {
@@ -52,9 +55,6 @@ static const struct drm_driver ipdisp_drm_driver = {
     .minor = DRIVER_MINOR,
     .patchlevel = DRIVER_PATCHLEVEL,
 };
-
-/* File operations for DRM device */
-DEFINE_DRM_GEM_FOPS(ipdisp_fops);
 
 /* Device initialization */
 static int ipdisp_device_init(struct ipdisp_device *idev)
